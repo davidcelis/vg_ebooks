@@ -7,5 +7,9 @@ module VGEbooks
     def initialize(client)
       @client = client
     end
+
+    def start!
+
+    end
   end
 end
