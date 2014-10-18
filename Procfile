@@ -1,1 +1,1 @@
-worker: bin/vg_ebooks
+worker: bundle exec bin/vg_ebooks
