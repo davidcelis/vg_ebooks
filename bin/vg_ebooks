@@ -15,7 +15,7 @@ bot = Ebooks::Bot.new('vg_ebooks') do |bot|
 
   bot.scheduler.every '8h' do
     # Tweet a fake game every 8 hours
-    bot.tweet(make_game)
+    bot.tweet(bot.make_game)
   end
 end
 
