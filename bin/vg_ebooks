@@ -5,8 +5,8 @@ require File.expand_path '../../lib/twitter_ebooks/bot', __FILE__
 bot = Ebooks::Bot.new('vg_ebooks') do |bot|
   bot.consumer_key       = ENV['TWITTER_CONSUMER_KEY']
   bot.consumer_secret    = ENV['TWITTER_CONSUMER_SECRET']
-  bot.oauth_token        = ENV['TWITTER_OATH_TOKEN']
-  bot.oauth_token_secret = ENV['TWITTER_OATH_TOKEN_SECRET']
+  bot.oauth_token        = ENV['TWITTER_OAUTH_TOKEN']
+  bot.oauth_token_secret = ENV['TWITTER_OAUTH_TOKEN_SECRET']
 
   bot.on_follow do |user|
     # Follow a user back
