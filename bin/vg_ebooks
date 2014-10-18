@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require 'twitter_ebooks'
+require File.expand_path '../../lib/twitter_ebooks/bot', __FILE__
 
 bot = Ebooks::Bot.new('vg_ebooks') do |bot|
   bot.consumer_key       = ENV['TWITTER_CONSUMER_KEY']
@@ -11,6 +11,11 @@ bot = Ebooks::Bot.new('vg_ebooks') do |bot|
   bot.on_follow do |user|
     # Follow a user back
     bot.follow(user[:screen_name])
+  end
+
+  bot.scheduler.every '8h' do
+    # Tweet a fake game every 8 hours
+    bot.tweet(make_game)
   end
 end
 
