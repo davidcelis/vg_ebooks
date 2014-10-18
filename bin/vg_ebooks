@@ -7,6 +7,11 @@ bot = Ebooks::Bot.new('vg_ebooks') do |bot|
   bot.consumer_secret    = ENV['TWITTER_CONSUMER_SECRET']
   bot.oauth_token        = ENV['TWITTER_OATH_TOKEN']
   bot.oauth_token_secret = ENV['TWITTER_OATH_TOKEN_SECRET']
+
+  bot.on_follow do |user|
+    # Follow a user back
+    bot.follow(user[:screen_name])
+  end
 end
 
 EM.run { bot.start }
