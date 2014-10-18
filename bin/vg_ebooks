@@ -1,13 +1,12 @@
 #!/usr/bin/env ruby
 
-$LOAD_PATH.unshift '../../lib', __FILE__
-require 'vg_ebooks/bot'
+require 'twitter_ebooks'
 
-client = Twitter::Streaming::Client.new do |config|
-  config.consumer_key        = ENV['TWITTER_CONSUMER_KEY']
-  config.consumer_secret     = ENV['TWITTER_CONSUMER_SECRET']
-  config.access_token        = ENV['TWITTER_TOKEN']
-  config.access_token_secret = ENV['TWITTER_TOKEN_SECRET']
+bot = Ebooks::Bot.new('vg_ebooks') do |bot|
+  bot.consumer_key       = ENV['TWITTER_CONSUMER_KEY']
+  bot.consumer_secret    = ENV['TWITTER_CONSUMER_SECRET']
+  bot.oauth_token        = ENV['TWITTER_OATH_TOKEN']
+  bot.oauth_token_secret = ENV['TWITTER_OATH_TOKEN_SECRET']
 end
 
-VGEbooks::Bot.new(client).start!
+EM.run { bot.start }

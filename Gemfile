@@ -1,3 +1,3 @@
 source 'https://rubygems.org'
 
-gem 'twitter', '~> 5.11'
+gem 'twitter_ebooks', '~> 2.2'
