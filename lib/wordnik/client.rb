@@ -33,7 +33,7 @@ module Wordnik
       put:    Net::HTTP::Put,
       delete: Net::HTTP::Delete
     }
-    HOST = 'developer.wordnik.com'
+    HOST = 'api.wordnik.com'
     BASE_PATH = '/v4'
     PORT = 80
 

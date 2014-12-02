@@ -13,9 +13,9 @@ bot = Ebooks::Bot.new('vg_ebooks') do |bot|
     bot.follow(user[:screen_name])
   end
 
-  bot.scheduler.every '8h' do
-    # Tweet a fake game every 8 hours
-    bot.tweet(bot.make_game)
+  bot.scheduler.every '24h' do
+    # Once a day, tweet a game with the Word of the Day.
+    bot.tweet_game_of_the_day
   end
 end
 

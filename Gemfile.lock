@@ -6,6 +6,7 @@ GEM
     bloomfilter-rb (2.1.1)
       redis
     buftok (0.2.0)
+    coderay (1.1.0)
     cookiejar (0.3.2)
     daemons (1.1.9)
     em-http-request (1.0.3)
@@ -34,13 +35,19 @@ GEM
       whatlanguage (>= 1.0.0)
     htmlentities (4.3.2)
     http_parser.rb (0.6.0)
+    method_source (0.8.2)
     minitest (5.4.2)
     multi_json (1.10.1)
     multipart-post (2.0.0)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     redis (3.1.0)
     rufus-scheduler (3.0.9)
       tzinfo
     simple_oauth (0.2.0)
+    slop (3.6.0)
     thread_safe (0.3.4)
     tweetstream (2.5.0)
       daemons (~> 1.1)
@@ -71,5 +78,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  pry
   simple_oauth (~> 0.2.0)
   twitter_ebooks (~> 2.2)
